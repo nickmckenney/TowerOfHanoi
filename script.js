@@ -5,8 +5,8 @@ let midBlock = document.querySelector(".midCenterB");
 let bottomBlock = document.querySelector(".bottomCenterB");
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
-const rCB = document.querySelector(".rightCenterBlock");
-
+const rightB = document.querySelector(".rightCenterBlock");
+let move = 0;
 let arr1 = [];
 let arr2 = [];
 let arr3 = [];
@@ -33,13 +33,22 @@ arr1.push(topBlock);
 
 // ELEMENTS OF CONTAINERS
 leftB.addEventListener("click", function(evt) {
-  console.log("a");
-  if (blockInPlay.length == 0) {
+  evt.preventDefault();
+  if (blockInPlay.length !== 0 || leftB.childElementCount !== 0) {
+    if (blockInPlay.length == 0) {
+      blockInPlay.push(leftB.lastElementChild);
+      leftB.removeChild(leftB.lastElementChild);
+    } else {
+      leftB.insertBefore(blockInPlay[0], leftB.lastchildElement);
+      blockInPlay.pop();
+    }
+    move += 1;
   }
 });
 
 mid.addEventListener("click", function(evt) {
-  // mid.appendChild(blockSetter);
-});
-rCB.addEventListener("click", function(evt) {});
+  evt.preventDefault();
+  if (blockInPlay.length !== 0 || mid.childElementCount !== 0) {
+    if (blockInPlay.length == 0) {
+  
 //
