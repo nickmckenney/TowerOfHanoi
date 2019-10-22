@@ -35,6 +35,7 @@ bottomBlock.addEventListener("click", function(evt) {
 
 mid.addEventListener("click", function(evt) {
   mid.appendChild(blockSetter);
+
   blockSetter.style.backgroundColor = "green";
 });
 rCB.addEventListener("click", function(evt) {

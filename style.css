@@ -58,14 +58,11 @@ padding-top: 50px;
   width:200px;
 
 }
-.middle{  background-color: purple;
+.middle{  background-color: pink;
   width:310px;
-
-
-
 }
 
-.rightCenterBlock{  background-color: yellow;
+.rightCenterBlock{  background-color: pink;
   width:310px;
   }
 .leftBlock{  background-color: white;
@@ -74,6 +71,10 @@ padding-top: 250px;
 padding-bottom: 250px;
 padding-left: 20px;
 grid-row: 2 /span 3;
+}
+.container{
+  /* background-color: pink; */
+height:170px;
 }
 .bottomLeft,.topLeft{
   background-color: teal;
@@ -95,4 +96,7 @@ grid-row:2 /span 3;
 grid-row: 3;
 display: flex;
 justify-content: space-around;
+}
+.topCenterB,.midCenterB,.bottomCenterB{
+  height: 100px;
 }
