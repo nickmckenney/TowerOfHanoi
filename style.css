@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
   display:grid;
-  border:1px solid black;
+  /* border:1px solid black; */
   /* min-height:100vh; */
 
 }
@@ -13,7 +13,10 @@ grid-template-columns: 7% 75% 18%;
 .headerBlock{
   background-color: green;
 grid-column: 1 /span 3;
-grid-row: 1
+grid-row: 1;
+}
+h1{
+  text-align: center;
 }
 .centerBlock{
 display: flex;
