@@ -111,4 +111,11 @@ rightB.addEventListener("click", function(evt) {
       move += 1;
     }
   }
+  if (rightB.childElementCount == 3) {
+    finisher();
+  }
 });
+
+function finisher() {
+  alert("YOUR DONE");
+}
