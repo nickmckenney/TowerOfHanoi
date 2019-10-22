@@ -51,6 +51,7 @@ leftB.addEventListener("click", function(evt) {
 
 mid.addEventListener("click", function(evt) {
   evt.preventDefault();
+
   if (blockInPlay.length !== 0 || mid.childElementCount !== 0) {
     if (blockInPlay.length == 0) {
       blockInPlay.push(mid.lastElementChild);
@@ -62,6 +63,7 @@ mid.addEventListener("click", function(evt) {
     }
     move += 1;
   }
+
   // mid.appendChild(blockSetter);
 });
 rightB.addEventListener("click", function(evt) {
