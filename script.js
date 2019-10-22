@@ -1,12 +1,15 @@
 console.log("TEST");
 let blockSetter;
+let arr = [];
 const topBlock = document.querySelector(".topCenterB");
 const midBlock = document.querySelector(".midCenterB");
 const bottomBlock = document.querySelector(".bottomCenterB");
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
 const rCB = document.querySelector(".rightCenterBlock");
-
+arr.push(bottomBlock);
+arr.push(midBlock);
+arr.push(topBlock);
 topBlock.addEventListener("click", function(evt) {
   topBlock.style.backgroundColor = "pink";
   blockSetter = topBlock;
