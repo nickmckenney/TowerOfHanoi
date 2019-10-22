@@ -8,7 +8,7 @@
 .mainBlock{
   display:grid;
 grid-template-rows: 10vh 80vh 10vh;
-grid-template-columns: 10% 75% 15%;
+grid-template-columns: 7% 75% 18%;
 }
 .headerBlock{
   background-color: green;
@@ -40,11 +40,21 @@ justify-content: space-evenly;
 .rightCenterBlock{  background-color: yellow;
   width:310px;
   }
-.leftBlock{  background-color: teal;
+.leftBlock{  background-color: white;
 grid-column: 1;
+padding-top: 250px;
+padding-bottom: 250px;
+padding-left: 20px;
 grid-row: 2 /span 3;
-
-
+}
+.bottomLeft,.topLeft{
+  background-color: teal;
+}
+.bottomLeft{
+  margin-top: 30px;
+}
+.topLeft{
+  margin-bottom: 30px;
 }
 .rightBlock{  background-color: violet;
 grid-column: 3;
