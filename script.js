@@ -1,41 +1,45 @@
-console.log("TEST");
 let blockSetter;
-let arr = [];
-const topBlock = document.querySelector(".topCenterB");
-const midBlock = document.querySelector(".midCenterB");
-const bottomBlock = document.querySelector(".bottomCenterB");
+
+let topBlock = document.querySelector(".topCenterB");
+let midBlock = document.querySelector(".midCenterB");
+let bottomBlock = document.querySelector(".bottomCenterB");
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
 const rCB = document.querySelector(".rightCenterBlock");
-arr.push(bottomBlock);
-arr.push(midBlock);
-arr.push(topBlock);
-topBlock.addEventListener("click", function(evt) {
-  topBlock.style.backgroundColor = "pink";
-  blockSetter = topBlock;
-});
 
-midBlock.addEventListener("click", function(evt) {
-  midBlock.style.backgroundColor = "pink";
-  blockSetter = midBlock;
-});
+let arr1 = [];
+let arr2 = [];
+let arr3 = [];
+let blockInPlay = [];
+arr1.push(bottomBlock);
+arr1.push(midBlock);
+arr1.push(topBlock);
 
-bottomBlock.addEventListener("click", function(evt) {
-  bottomBlock.style.backgroundColor = "pink";
-  blockSetter = bottomBlock;
+// topBlock.addEventListener("click", function(evt) {
+//   topBlock.style.backgroundColor = "pink";
+//   blockSetter = topBlock;
+//   console.log("T");
+// });
+//
+// midBlock.addEventListener("click", function(evt) {
+//   midBlock.style.backgroundColor = "pink";
+//   blockSetter = midBlock;
+//   console.log("MiddleBlock");
+// });
+// bottomBlock.addEventListener("click", function(evt) {
+//   bottomBlock.style.backgroundColor = "pink";
+//   blockSetter = bottomBlock;
+// });
+
+// ELEMENTS OF CONTAINERS
+leftB.addEventListener("click", function(evt) {
+  console.log("a");
+  if (blockInPlay.length == 0) {
+  }
 });
 
 mid.addEventListener("click", function(evt) {
-  mid.appendChild(blockSetter);
-
-  blockSetter.style.backgroundColor = "green";
+  // mid.appendChild(blockSetter);
 });
-rCB.addEventListener("click", function(evt) {
-  rCB.appendChild(blockSetter);
-  blockSetter.style.backgroundColor = "green";
-});
+rCB.addEventListener("click", function(evt) {});
 //
-leftB.addEventListener("click", function(evt) {
-  leftB.appendChild(blockSetter);
-  blockSetter.style.backgroundColor = "green";
-});
