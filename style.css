@@ -32,7 +32,7 @@ justify-content: space-evenly;
   /* padding:15%; */
 
 }
-.leftCenterBlock{
+.leftCenterBlock,.middle,.rightCenterBlock{
   width:310px;
     background-color: pink;
     padding-top: 90px;
@@ -43,6 +43,7 @@ justify-items:center;
 .topCenterB{
   background-color: green;
   width:100px;
+
   /* padding-top: 40px; */
 
 }
@@ -59,6 +60,7 @@ padding-top: 50px;
 }
 .middle{  background-color: purple;
   width:310px;
+
 
 
 }
