@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  display:grid;
+  /* display:grid; */
 }
 .mainBlock{
   display:grid;
@@ -11,9 +11,15 @@ grid-template-columns: 7% 75% 18%;
   background-color: green;
 grid-column: 1 /span 3;
 grid-row: 1;
+display: inline-block;
+display: inline-grid;
 }
 h1{
   text-align: center;
+  display: inline-block;
+}
+span{
+
 }
 .centerBlock{
 display: flex;
@@ -29,6 +35,11 @@ justify-content: space-evenly;
   /* padding:15%; */
 
 }
+.rightBlock{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 20px;
+}
 .leftCenterBlock,.middle,.rightCenterBlock{
   width:310px;
     background-color: pink;
@@ -41,27 +52,35 @@ align-items: center;
 
 }
 .topCenterB{
-  background-color: green;
+  background-image:url("https://media0.giphy.com/media/eoxomXXVL2S0E/200.webp?cid=790b7611dffe8362a96a536e025d4fd793e5b1056eabfc2c&rid=200.webp");
   width:100px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .midCenterB{
-  background-color: yellow;
+  background-image:url("https://media2.giphy.com/media/h30Uk86LypXpe/200.webp?cid=790b7611b4275e794a61d6ae823372fa57c30d8eaca5b786&rid=200.webp");
   width:150px;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 20px;
 }
 .bottomCenterB{
 padding-top: 50px;
-  background-color: red;
+  background-image:url("https://media3.giphy.com/media/BmmfETghGOPrW/giphy.gif?cid=790b7611b4275e794a61d6ae823372fa57c30d8eaca5b786&rid=giphy.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
   width:200px;
 
 }
 
 
-.leftBlock{  background-color: white;
+.leftBlock{
+display: grid;
+  background-color: white;
 grid-column: 1;
-padding-top: 250px;
+padding-top: 0px;
 padding-bottom: 250px;
-padding-left: 20px;
+padding-left: 0px;
 grid-row: 2 /span 3;
 }
 .container{
