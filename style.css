@@ -1,9 +1,6 @@
 *{
   box-sizing: border-box;
   display:grid;
-  /* border:1px solid black; */
-  /* min-height:100vh; */
-
 }
 .mainBlock{
   display:grid;
@@ -38,14 +35,13 @@ justify-content: space-evenly;
     padding-top: 90px;
 display: grid;
 justify-items:center;
-
+display: flex;
+flex-direction: column-reverse;
+align-items: center;
 }
 .topCenterB{
   background-color: green;
   width:100px;
-
-  /* padding-top: 40px; */
-
 }
 .midCenterB{
   background-color: yellow;
@@ -58,13 +54,8 @@ padding-top: 50px;
   width:200px;
 
 }
-.middle{  background-color: pink;
-  width:310px;
-}
 
-.rightCenterBlock{  background-color: pink;
-  width:310px;
-  }
+
 .leftBlock{  background-color: white;
 grid-column: 1;
 padding-top: 250px;
@@ -73,7 +64,6 @@ padding-left: 20px;
 grid-row: 2 /span 3;
 }
 .container{
-  /* background-color: pink; */
 height:170px;
 }
 .bottomLeft,.topLeft{
@@ -88,11 +78,8 @@ height:170px;
 .rightBlock{  background-color: violet;
 grid-column: 3;
 grid-row:2 /span 3;
-
-
 }
 .bottom{
-/* grid-column: 2; */
 grid-row: 3;
 display: flex;
 justify-content: space-around;

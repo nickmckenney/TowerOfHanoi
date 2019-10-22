@@ -1,22 +1,11 @@
 console.log("TEST");
 let blockSetter;
-// 3 DIV elements for blocks
-//NAV bar for difficulty
-//3 sticks
-//all blocks began in order in DIV 1
-//Each block is its own DIV
-//
 const topBlock = document.querySelector(".topCenterB");
 const midBlock = document.querySelector(".midCenterB");
 const bottomBlock = document.querySelector(".bottomCenterB");
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
 const rCB = document.querySelector(".rightCenterBlock");
-
-// const colorField = document.querySelector("#color-field");
-// const setColor = document.querySelector("#set-color");
-// const brush = document.querySelector(".brush");
-// const body = document.querySelector("body");
 
 topBlock.addEventListener("click", function(evt) {
   topBlock.style.backgroundColor = "pink";
@@ -43,7 +32,7 @@ rCB.addEventListener("click", function(evt) {
   blockSetter.style.backgroundColor = "green";
 });
 //
-// leftB.addEventListener("click", function(evt) {
-//   leftB.appendChild(blockSetter);
-//   blockSetter.style.backgroundColor = "green";
-// });
+leftB.addEventListener("click", function(evt) {
+  leftB.appendChild(blockSetter);
+  blockSetter.style.backgroundColor = "green";
+});
