@@ -1,4 +1,5 @@
 console.log("TEST");
+let blockSetter;
 // 3 DIV elements for blocks
 //NAV bar for difficulty
 //3 sticks
@@ -18,17 +19,20 @@ const rCB = document.querySelector(".rightCenterBlock");
 
 topBlock.addEventListener("click", function(evt) {
   topBlock.style.backgroundColor = "pink";
+  blockSetter = topBlock;
 });
 
 midBlock.addEventListener("click", function(evt) {
   midBlock.style.backgroundColor = "pink";
+  blockSetter = midBlock;
 });
 
 bottomBlock.addEventListener("click", function(evt) {
   bottomBlock.style.backgroundColor = "pink";
+  blockSetter = bottomBlock;
 });
 
 mid.addEventListener("click", function(evt) {
-  mid.appendChild(topBlock);
-  topBlock.style.backgroundColor = "green";
+  mid.appendChild(blockSetter);
+  blockSetter.style.backgroundColor = "green";
 });
