@@ -35,9 +35,9 @@ justify-content: space-evenly;
 .leftCenterBlock{
   width:310px;
     background-color: pink;
-    padding-top: 60px;
+    padding-top: 90px;
 display: grid;
-justify-items:center;  
+justify-items:center;
 
 }
 .topCenterB{
@@ -49,16 +49,20 @@ justify-items:center;
 .midCenterB{
   background-color: yellow;
   width:150px;
+  padding-top: 20px;
 }
 .bottomCenterB{
-
+padding-top: 50px;
   background-color: red;
   width:200px;
 
 }
 .middle{  background-color: purple;
   width:310px;
+
+
 }
+
 .rightCenterBlock{  background-color: yellow;
   width:310px;
   }
