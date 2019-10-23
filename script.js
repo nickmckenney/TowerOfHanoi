@@ -26,16 +26,20 @@ let blockInPlay = [];
 arr1.push(bottomBlock);
 arr1.push(midBlock);
 arr1.push(topBlock);
+let z = 0;
 levelUp.addEventListener("click", function(evt) {
   n += 1;
   if (n == 4) {
     levelFour();
+    z = 4;
   }
   if (n == 5) {
     levelFive();
+    z = 5;
   }
   if (n == 6) {
     levelSix();
+    z = 6;
   }
   if (n == 7) {
     levelSeven();
@@ -47,30 +51,35 @@ levelUp.addEventListener("click", function(evt) {
 let x = leftB.lastElementChild.innerText;
 
 leftB.addEventListener("click", function(evt) {
-  if (blockInPlay.length == 0 || leftB.childElementCount == n - 3) {
+  if (blockInPlay.length == 0 || leftB.childElementCount == 0) {
     evt.preventDefault();
     console.log("1");
 
-    if (blockInPlay.length !== 0 || leftB.childElementCount !== n - 3) {
+    if (blockInPlay.length !== 0 || leftB.childElementCount !== z) {
       console.log("2");
       if (blockInPlay.length == 0) {
         console.log("3");
         blockInPlay.push(leftB.lastElementChild);
         leftB.removeChild(leftB.lastElementChild);
+        z -= 1;
       } else {
         console.log("4");
         leftB.insertBefore(blockInPlay[0], leftB.lastchildElement);
         blockInPlay.pop();
       }
     }
-  } else if (blockInPlay[0].innerText > leftB.lastElementChild.innerText) {
+  } else if (
+    Number(blockInPlay[0].innerText) > Number(leftB.lastElementChild.innerText)
+  ) {
     console.log("5");
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || leftB.childElementCount !== n - 3) {
-      console.log("6");
+    if (blockInPlay.length !== 0 || leftB.childElementCount !== z) {
+      // console.log("6");
       if (blockInPlay.length == 0) {
         blockInPlay.push(leftB.lastElementChild);
         leftB.removeChild(leftB.lastElementChild);
+        z += 1;
+
         console.log("7");
       } else {
         console.log("8");
@@ -79,22 +88,6 @@ leftB.addEventListener("click", function(evt) {
       }
     }
   }
-  // if (blockInPlay.length == 1 && leftB.childElementCount == 0) {
-  //   console.log("5");
-  //   evt.preventDefault();
-  //   if (blockInPlay.length !== 0 || leftB.childElementCount !== 0) {
-  //     console.log("6");
-  //     if (blockInPlay.length == 0) {
-  //       blockInPlay.push(leftB.lastElementChild);
-  //       leftB.removeChild(leftB.lastElementChild);
-  //       console.log("7");
-  //     } else {
-  //       console.log("8");
-  //       leftB.insertBefore(blockInPlay[0], leftB.lastchildElement);
-  //       blockInPlay.pop();
-  //     }
-  //   }
-  // }
   moves += 0.5;
   h4.innerText = "MOVES " + moves;
 });
@@ -202,17 +195,4 @@ function levelEight() {
 }
 solveForMe.addEventListener("click", function(evt) {
   evt.preventDefault();
-  // THIS IS NOT MY CODE
-  function Hanoi(n, from, to, via) {
-    if (n == 0) return;
-
-    Hanoi(n - 1, from, via, to);
-
-    moveDisk(from, to);
-
-    // callStack.push([from,to]); // save parameters to callStack array
-
-    Hanoi(n - 1, via, to, from);
-  }
-  // END OF THIS IS NOT MY CODE
 });
