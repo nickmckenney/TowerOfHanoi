@@ -35,6 +35,14 @@ justify-content: space-evenly;
   /* padding:15%; */
 
 }
+h3{
+  display: inline;
+}
+h4{
+  padding:0px;
+  height:0px;
+  margin: 0px;
+}
 .rightBlock{
   padding-left: 20px;
   padding-right: 20px;
@@ -52,27 +60,62 @@ align-items: center;
 
 }
 .topCenterB{
-  background-image:url("https://media0.giphy.com/media/eoxomXXVL2S0E/200.webp?cid=790b7611dffe8362a96a536e025d4fd793e5b1056eabfc2c&rid=200.webp");
+  background-color:black;
   width:100px;
-  background-size: cover;
-  background-repeat: no-repeat;
+
 }
+
 .midCenterB{
-  background-image:url("https://media2.giphy.com/media/h30Uk86LypXpe/200.webp?cid=790b7611b4275e794a61d6ae823372fa57c30d8eaca5b786&rid=200.webp");
+  background-color:black;
   width:150px;
-  background-size: cover;
-  background-repeat: no-repeat;
+
   padding-top: 20px;
 }
 .bottomCenterB{
 padding-top: 50px;
-  background-image:url("https://media3.giphy.com/media/BmmfETghGOPrW/giphy.gif?cid=790b7611b4275e794a61d6ae823372fa57c30d8eaca5b786&rid=giphy.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
+background-color:black;
   width:200px;
 
 }
+.bigBlock{
+  padding-top: 50px;
+  background-color:yellow;
+    width:250px;
+    display: none;
+}
+.biggerBlock{
+  padding-top: 50px;
+  background-color:red;
+    width:280px;
+    display: none;
+}
+.bigBodBlock{
+  padding-top: 50px;
+  background-color:green;
+    width:300px;
+    display: none;
+}
+.levelUp{
+  cursor:cell;
+  position: absolute;
+  left:.2%;
+bottom:45.2%;
+padding:60px;
+background-image: url("https://www.freeclipartnow.com/d/40231-6/arrow-blue-rounded-up.jpg");
+background-size: contain;
+background-repeat: no-repeat;
 
+}
+.levelDown{
+  cursor:cell;
+  position: absolute;
+  left:.2%;
+bottom:30%;
+padding:60px;
+background-image: url("  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiM8QSLNhW6NJYQcS6wHtdO4K49lGOOlBtqJHjdtiS3HCZby9D&s");
+background-size: contain;
+background-repeat: no-repeat;
+}
 
 .leftBlock{
 display: grid;
@@ -87,7 +130,7 @@ grid-row: 2 /span 3;
 height:170px;
 }
 .bottomLeft,.topLeft{
-  background-color: teal;
+  background-color: white;
 }
 .bottomLeft{
   margin-top: 30px;
