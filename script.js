@@ -7,7 +7,7 @@ let biggerBlock = document.querySelector(".biggerBlock");
 let bigBodBlock = document.querySelector(".bigBodBlock");
 let bottomBlock = document.querySelector(".bottomCenterB");
 let tallBlock = document.querySelector(".tallBlock");
-
+let tallerBlock = document.querySelector(".tallerBlock");
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
 const rightB = document.querySelector(".rightCenterBlock");
@@ -15,6 +15,7 @@ let h3 = document.querySelector("h3");
 let center = document.querySelector(".centerBlock");
 let h4 = document.querySelector("h4");
 let levelUp = document.querySelector(".levelUp");
+
 let moves = 0;
 let n = 3;
 let arr1 = [];
@@ -37,10 +38,9 @@ levelUp.addEventListener("click", function(evt) {
   }
   if (n == 7) {
     levelSeven();
-    n = 7;
   }
-  if (n > 7) {
-    n = 7;
+  if (n == 8) {
+    levelEight();
   }
 });
 let x = leftB.lastElementChild.innerText;
@@ -190,5 +190,10 @@ function levelSix() {
 function levelSeven() {
   console.log("w");
   tallBlock.style.display = "block";
-  alert("");
+  alert("Welcome to the A team");
+}
+function levelEight() {
+  console.log("w");
+  tallerBlock.style.display = "block";
+  alert("Do you have anything better to do");
 }
