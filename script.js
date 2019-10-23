@@ -97,22 +97,36 @@ leftB.addEventListener("click", function(evt) {
 mid.addEventListener("click", function(evt) {
   if (blockInPlay.length == 0 || mid.childElementCount == 0) {
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || mid.childElementCount !== 0) {
+    console.log("1");
+
+    if (blockInPlay.length !== 0 || mid.childElementCount !== z) {
+      console.log("2");
       if (blockInPlay.length == 0) {
+        console.log("3");
         blockInPlay.push(mid.lastElementChild);
         mid.removeChild(mid.lastElementChild);
+        z -= 1;
       } else {
+        console.log("4");
         mid.insertBefore(blockInPlay[0], mid.lastchildElement);
         blockInPlay.pop();
       }
     }
-  } else if (blockInPlay[0].innerText > mid.lastElementChild.innerText) {
+  } else if (
+    Number(blockInPlay[0].innerText) > Number(mid.lastElementChild.innerText)
+  ) {
+    console.log("5");
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || mid.childElementCount !== 0) {
+    if (blockInPlay.length !== 0 || mid.childElementCount !== z) {
+      // console.log("6");
       if (blockInPlay.length == 0) {
         blockInPlay.push(mid.lastElementChild);
         mid.removeChild(mid.lastElementChild);
+        z += 1;
+
+        console.log("7");
       } else {
+        console.log("8");
         mid.insertBefore(blockInPlay[0], mid.lastchildElement);
         blockInPlay.pop();
       }
@@ -125,27 +139,47 @@ mid.addEventListener("click", function(evt) {
 rightB.addEventListener("click", function(evt) {
   if (blockInPlay.length == 0 || rightB.childElementCount == 0) {
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || rightB.childElementCount !== 0) {
+    console.log("1");
+
+    if (blockInPlay.length !== 0 || rightB.childElementCount !== z) {
+      console.log("2");
       if (blockInPlay.length == 0) {
+        console.log("3");
         blockInPlay.push(rightB.lastElementChild);
         rightB.removeChild(rightB.lastElementChild);
+        z -= 1;
+        console.log("TEST!");
       } else {
+        console.log("4");
         rightB.insertBefore(blockInPlay[0], rightB.lastchildElement);
         blockInPlay.pop();
+        z += 1;
       }
     }
-  } else if (blockInPlay[0].innerText > rightB.lastElementChild.innerText) {
+  } else if (
+    Number(blockInPlay[0].innerText) > Number(rightB.lastElementChild.innerText)
+  ) {
+    console.log("5");
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || rightB.childElementCount !== 0) {
+    if (blockInPlay.length !== 0 || rightB.childElementCount !== z) {
+      // console.log("6");
+      console.log("66");
       if (blockInPlay.length == 0) {
         blockInPlay.push(rightB.lastElementChild);
         rightB.removeChild(rightB.lastElementChild);
+        z += 1;
+        console.log("Test2");
+
+        console.log("7");
       } else {
+        console.log("8");
         rightB.insertBefore(blockInPlay[0], rightB.lastchildElement);
         blockInPlay.pop();
       }
     }
   }
+  moves += 0.5;
+  h4.innerText = "MOVES " + moves;
 
   if (rightB.childElementCount == n) {
     finisher();
