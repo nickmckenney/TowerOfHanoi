@@ -9,6 +9,7 @@ let bottomBlock = document.querySelector(".bottomCenterB");
 let tallBlock = document.querySelector(".tallBlock");
 let tallerBlock = document.querySelector(".tallerBlock");
 const leftB = document.querySelector(".leftCenterBlock");
+let solveForMe = document.querySelector(".solveForMe");
 const mid = document.querySelector(".middle");
 const rightB = document.querySelector(".rightCenterBlock");
 let h3 = document.querySelector("h3");
@@ -97,6 +98,8 @@ leftB.addEventListener("click", function(evt) {
   moves += 0.5;
   h4.innerText = "MOVES " + moves;
 });
+// CONNOR GAVE ME THE IDEA OF USING ONLY 3 EVENT LISTNERS INSTEAD OF ME USING 6. MADE CODE LESS COMPLICATED AND MORE DRY
+// CONNOR GAVE ME THE IDEA OF USING ONLY 3 EVENT LISTNERS INSTEAD OF ME USING 6. MADE CODE LESS COMPLICATED AND MORE DRY
 
 mid.addEventListener("click", function(evt) {
   if (blockInPlay.length == 0 || mid.childElementCount == 0) {
@@ -197,3 +200,19 @@ function levelEight() {
   tallerBlock.style.display = "block";
   alert("Do you have anything better to do");
 }
+solveForMe.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  // THIS IS NOT MY CODE
+  function Hanoi(n, from, to, via) {
+    if (n == 0) return;
+
+    Hanoi(n - 1, from, via, to);
+
+    moveDisk(from, to);
+
+    // callStack.push([from,to]); // save parameters to callStack array
+
+    Hanoi(n - 1, via, to, from);
+  }
+  // END OF THIS IS NOT MY CODE
+});
