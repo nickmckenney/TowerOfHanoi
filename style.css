@@ -21,6 +21,7 @@ h1{
 span{
 
 }
+
 .centerBlock{
 display: flex;
 
@@ -61,40 +62,54 @@ align-items: center;
 }
 .topCenterB{
   background-color:black;
-  width:100px;
+  width:50px;
 
 }
 
 .midCenterB{
   background-color:black;
-  width:150px;
-
-  padding-top: 20px;
+  width:100px;
 }
 .bottomCenterB{
-padding-top: 50px;
 background-color:black;
-  width:200px;
+  width:150px;
 
 }
 .bigBlock{
-  padding-top: 50px;
   background-color:yellow;
-    width:250px;
+    width:175px;
     display: none;
 }
 .biggerBlock{
-  padding-top: 50px;
   background-color:red;
-    width:280px;
+    width:200px;
     display: none;
 }
 .bigBodBlock{
-  padding-top: 50px;
   background-color:green;
-    width:300px;
+    width:225px;
     display: none;
 }
+.tallBlock{
+  background-color:purple;
+    width:250px;
+      display: none;
+}
+
+.tallerBlock{
+  padding-top: 75px;
+  background-color:purple;
+    width:275px;
+
+
+      display: none;
+}
+.sneaky,.sneaky1{padding-top: 75px;
+background-color:purple;
+  width:330px;
+  padding-top: 50px;
+
+    display: none;}
 .levelUp{
   cursor:cell;
   position: absolute;
@@ -149,4 +164,12 @@ justify-content: space-around;
 }
 .topCenterB,.midCenterB,.bottomCenterB{
   height: 100px;
+}
+.bottomCenterB,.topCenterB,.midCenterB,.bigBlock,.biggerBlock,.bigBodBlock,.tallBlock{
+  padding:0px;
+
+}
+.bottomCenterB,.topCenterB,.midCenterB,.bigBlock,.biggerBlock,.bigBodBlock,.tallBlock{
+  height:60px;
+
 }

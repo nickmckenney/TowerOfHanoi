@@ -6,6 +6,8 @@ let bigBlock = document.querySelector(".bigBlock");
 let biggerBlock = document.querySelector(".biggerBlock");
 let bigBodBlock = document.querySelector(".bigBodBlock");
 let bottomBlock = document.querySelector(".bottomCenterB");
+let tallBlock = document.querySelector(".tallBlock");
+
 const leftB = document.querySelector(".leftCenterBlock");
 const mid = document.querySelector(".middle");
 const rightB = document.querySelector(".rightCenterBlock");
@@ -33,15 +35,22 @@ levelUp.addEventListener("click", function(evt) {
   if (n == 6) {
     levelSix();
   }
+  if (n == 7) {
+    levelSeven();
+    n = 7;
+  }
+  if (n > 7) {
+    n = 7;
+  }
 });
 let x = leftB.lastElementChild.innerText;
 
 leftB.addEventListener("click", function(evt) {
-  if (blockInPlay.length == 0 || leftB.childElementCount == 0) {
+  if (blockInPlay.length == 0 || leftB.childElementCount == n - 3) {
     evt.preventDefault();
     console.log("1");
 
-    if (blockInPlay.length !== 0 || leftB.childElementCount !== 0) {
+    if (blockInPlay.length !== 0 || leftB.childElementCount !== n - 3) {
       console.log("2");
       if (blockInPlay.length == 0) {
         console.log("3");
@@ -56,7 +65,7 @@ leftB.addEventListener("click", function(evt) {
   } else if (blockInPlay[0].innerText > leftB.lastElementChild.innerText) {
     console.log("5");
     evt.preventDefault();
-    if (blockInPlay.length !== 0 || leftB.childElementCount !== 0) {
+    if (blockInPlay.length !== 0 || leftB.childElementCount !== n - 3) {
       console.log("6");
       if (blockInPlay.length == 0) {
         blockInPlay.push(leftB.lastElementChild);
@@ -177,4 +186,9 @@ function levelFive() {
 }
 function levelSix() {
   bigBodBlock.style.display = "block";
+}
+function levelSeven() {
+  console.log("w");
+  tallBlock.style.display = "block";
+  alert("");
 }
