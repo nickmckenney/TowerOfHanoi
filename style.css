@@ -171,7 +171,6 @@ justify-content: space-around;
 .bottomCenterB,.topCenterB,.midCenterB,.bigBlock,.biggerBlock,.bigBodBlock,.tallBlock{
   height:60px;
   padding:0px;
+  position: relative;
 
 }
-
- 

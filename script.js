@@ -1,4 +1,8 @@
 let blockSetter;
+let dR = 935;
+let dM = 460;
+let dL = 0;
+let dDD = -120;
 
 let topBlock = document.querySelector(".topCenterB");
 let midBlock = document.querySelector(".midCenterB");
@@ -20,8 +24,6 @@ let levelUp = document.querySelector(".levelUp");
 let moves = 0;
 let n = 3;
 let arr1 = [];
-let arr2 = [];
-let arr3 = [];
 let blockInPlay = [];
 arr1.push(bottomBlock);
 arr1.push(midBlock);
@@ -88,8 +90,6 @@ leftB.addEventListener("click", function(evt) {
       }
     }
   }
-  moves += 0.5;
-  h4.innerText = "MOVES " + moves;
 });
 // CONNOR GAVE ME THE IDEA OF USING ONLY 3 EVENT LISTNERS INSTEAD OF ME USING 6. MADE CODE LESS COMPLICATED AND MORE DRY
 // CONNOR GAVE ME THE IDEA OF USING ONLY 3 EVENT LISTNERS INSTEAD OF ME USING 6. MADE CODE LESS COMPLICATED AND MORE DRY
@@ -132,8 +132,6 @@ mid.addEventListener("click", function(evt) {
       }
     }
   }
-  moves += 0.5;
-  h4.innerText = "MOVES " + moves;
 });
 
 rightB.addEventListener("click", function(evt) {
@@ -178,14 +176,10 @@ rightB.addEventListener("click", function(evt) {
       }
     }
   }
-  moves += 0.5;
-  h4.innerText = "MOVES " + moves;
 
   if (rightB.childElementCount == n) {
     finisher();
   }
-  moves += 0.5;
-  h4.innerText = "MOVES " + moves;
 });
 var secs = 0;
 function finisher() {
@@ -227,6 +221,103 @@ function levelEight() {
   tallerBlock.style.display = "block";
   alert("Do you have anything better to do");
 }
-solveForMe.addEventListener("click", function(evt) {
-  evt.preventDefault();
-});
+function mightnotneed() {
+  // solveForMe.addEventListener("click", function(evt) {
+  //   evt.preventDefault();
+  //
+  //   topBlock.style.left = dR + "px";
+  //   midBlock.style.left = dM + "px";
+  //   topBlock.style.left = dM + "px";
+  //   bottomBlock.style.left = dR + "px";
+  //   topBlock.style.left = dL + "px";
+  //   midBlock.style.left = dR + "px";
+  //   topBlock.style.left = dR + "px";
+  // });
+}
+function algorithm() {
+  //   if (topBlock && dst && rightB.childElementCount == 0) {
+  //     topBlock.style.left = dR + "px";
+  //     topBlock.style.left = dDD + "px";
+  //   }
+  //   if (topBlock && dst && rightB.childElementCount == 1) {
+  //     topBlock.style.left = dR + "px";
+  //     topBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (topBlock && mid && midB.childElementCount == 0) {
+  //     topBlock.style.left = dM + "px";
+  //     topBlock.style.left = dDD + "px";
+  //   }
+  //   if (topBlock && mid && midB.childElementCount == 1) {
+  //     topBlock.style.left = dM + "px";
+  //     topBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (topBlock && start && leftB.childElementCount == 0) {
+  //     topBlock.style.left = dM + "px";
+  //     topBlock.style.left = dDD + "px";
+  //   }
+  //   if (topBlock && start && leftB.childElementCount == 1) {
+  //     topBlock.style.left = dM + "px";
+  //     topBlock.style.left = dDD / 2 + "px";
+  //   }
+  //
+  //   if (midBlock && dst && rightB.childElementCount == 0) {
+  //     midBlock.style.left = dR + "px";
+  //     midBlock.style.left = dDD + "px";
+  //   }
+  //   if (midBlock && dst && rightB.childElementCount == 1) {
+  //     midBlock.style.left = dR + "px";
+  //     midBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (midBlock && mid && midB.childElementCount == 0) {
+  //     midBlock.style.left = dM + "px";
+  //     midBlock.style.left = dDD + "px";
+  //   }
+  //   if (midBlock && mid && midB.childElementCount == 1) {
+  //     midBlock.style.left = dM + "px";
+  //     midBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (midBlock && start && leftB.childElementCount == 0) {
+  //     midBlock.style.left = dM + "px";
+  //     midBlock.style.left = dDD + "px";
+  //   }
+  //   if (midBlock && start && leftB.childElementCount == 1) {
+  //     midBlock.style.left = dM + "px";
+  //     midBlock.style.left = dDD / 2 + "px";
+  //   }
+  //
+  //   if (rightBlock && dst && rightB.childElementCount == 0) {
+  //     rightBlock.style.left = dR + "px";
+  //     rightBlock.style.left = dDD + "px";
+  //   }
+  //   if (rightBlock && dst && rightB.childElementCount == 1) {
+  //     rightBlock.style.left = dR + "px";
+  //     rightBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (rightBlock && mid && midB.childElementCount == 0) {
+  //     rightBlock.style.left = dM + "px";
+  //     rightBlock.style.left = dDD + "px";
+  //   }
+  //   if (rightBlock && mid && midB.childElementCount == 1) {
+  //     rightBlock.style.left = dM + "px";
+  //     rightBlock.style.left = dDD / 2 + "px";
+  //   }
+  //   if (rightBlock && start && leftB.childElementCount == 0) {
+  //     rightBlock.style.left = dM + "px";
+  //     rightBlock.style.left = dDD + "px";
+  //   }
+  //   if (rightBlock && start && leftB.childElementCount == 1) {
+  //     rightBlock.style.left = dM + "px";
+  //     rightBlock.style.left = dDD / 2 + "px";
+  //   }
+}
+// https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
+
+var hanoi = function(n, src, aux, dst) {
+  if (n > 0) {
+    hanoi(n - 1, src, dst, aux);
+    console.log(n + src + " to " + dst);
+    hanoi(n - 1, aux, src, dst);
+  }
+};
+hanoi(3, "Start", "Middle", "Dst");
+// https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
