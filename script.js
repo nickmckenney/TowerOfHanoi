@@ -222,299 +222,491 @@ function levelEight() {
   tallerBlock.style.display = "block";
   alert("Do you have anything better to do");
 }
+// solveForMe.addEventListener("click", function(evt) {
+//   if(n==4)
+// });
+// let rightBlocks = 0;
+// let midBlocks = 0;
+// let leftBlocks = 3;
+//
+// function hanoi(q, src, aux, dst) {
+//   // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
+//   // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
+//   if (q > 0) {
+//     // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
+//     hanoi(q - 1, src, dst, aux); // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
+//     console.log("Move disc " + n + " from " + src + " to " + dst);
+//     if (q == 3) {
+//       console.log("topBlock");
+//       if (dst == "Dst" && src == "Start") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           if (leftBlocks == 0) {
+//             topBlock.style.left = dR + "px";
+//             topBlock.style.bottom = dDD + "px";
+//           } else if (leftBlocks == 1) {
+//             topBlock.style.left = dR + "px";
+//             topBlock.style.bottom = dDD / 2 + "px";
+//           } else {
+//             topBlock.style.bottom = 0 + "px";
+//           }
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           topBlock.style.left = dR + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           topBlock.style.left = dR + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       } else if (dst == "Dst" && src == "Middle") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           topBlock.style.left = dR / 2 + "px";
+//           topBlock.style.bottom = dDD + "px";
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           topBlock.style.left = dR / 2 + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           topBlock.style.left = dR / 2 + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       } else if (dst == "Start" && src == "Middle") {
+//         if (midBlocks == 0) {
+//           midBlocks -= 1;
+//           leftBlocks += 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = dDD + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           midBlocks -= 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           leftBlocks += 1;
+//           midBlocks -= 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       } else if (dst == "Start" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           rightBlocks -= 1;
+//           leftBlocks += 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = dDD + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           rightBlocks -= 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           leftBlocks += 1;
+//           rightBlocks -= 1;
+//           topBlock.style.left = dL + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Start") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = dDD + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = dDD + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = dDD / 2 + "px";
+//         } else {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           topBlock.style.left = dM + "px";
+//           topBlock.style.bottom = 0 + "px";
+//         }
+//       }
+//     } else if (q == 2) {
+//       console.log("midBlock");
+//       if (dst == "Dst" && src == "Start") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           midBlock.style.left = dR + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           midBlock.style.left = dR + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       } else if (dst == "Dst" && src == "Middle") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           midBlock.style.left = dR + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           midBlock.style.left = dR + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       } else if (dst == "Start" && src == "Middle") {
+//         if (midBlocks == 0) {
+//           midBlocks -= 1;
+//           leftBlocks += 1;
+//           midBlock.style.left = dL + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           midBlocks -= 1;
+//           midBlock.style.left = dL + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       } else if (dst == "Start" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           rightBlocks -= 1;
+//           leftBlocks += 1;
+//           midBlock.style.left = dL + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           rightBlocks -= 1;
+//           midBlock.style.left = dL + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Start") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           midBlock.style.left = dM + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           midBlock.style.left = dM + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           midBlock.style.left = dM + "px";
+//           midBlock.style.bottom = dDD / 2 + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           midBlock.style.left = dM + "px";
+//           midBlock.style.top = 0 + "px";
+//         }
+//       }
+//     } else if (q == 1) {
+//       console.log("topBlock");
+//       if (dst == "Dst" && src == "Start") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         } else {
+//           rightBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         }
+//       } else if (dst == "Dst" && src == "Middle") {
+//         if (rightBlocks == 0) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         } else if (rightBlocks == 1) {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         } else {
+//           rightBlocks += 1;
+//           midBlocks -= 1;
+//           bottomBlock.style.left = dR + "px";
+//         }
+//       } else if (dst == "Start" && src == "Middle") {
+//         if (midBlocks == 0) {
+//           midBlocks -= 1;
+//           leftBlocks += 1;
+//           bottomBlock.style.left = dL + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           midBlocks -= 1;
+//           bottomBlock.style.left = dL + "px";
+//         } else {
+//           leftBlocks += 1;
+//           midBlocks -= 1;
+//           bottomBlock.style.left = dL + "px";
+//         }
+//       } else if (dst == "Start" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           rightBlocks -= 1;
+//           leftBlocks += 1;
+//           bottomBlock.style.left = dL + "px";
+//         } else if (midBlocks == 1) {
+//           leftBlocks += 1;
+//           rightBlocks -= 1;
+//           bottomBlock.style.left = dL + "px";
+//         } else {
+//           leftBlocks += 1;
+//           rightBlocks -= 1;
+//           bottomBlock.style.left = dL + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Start") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         } else {
+//           midBlocks += 1;
+//           leftBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         }
+//       } else if (dst == "Middle" && src == "Dst") {
+//         if (midBlocks == 0) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         } else if (midBlocks == 1) {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         } else {
+//           midBlocks += 1;
+//           rightBlocks -= 1;
+//           bottomBlock.style.left = dM + "px";
+//         }
+//       }
+//     }
+//     setInterval(function() {
+//       //tyler
+//       hanoi(q - 1, aux, src, dst);
+//     }, 2000);
+//   }
+// }
 
-let rightBlocks = 0;
-let midBlocks = 0;
-let leftBlocks = 3;
-
-function hanoi(q, src, aux, dst) {
-  // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
-  // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
-  if (q > 0) {
-    // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
-    hanoi(q - 1, src, dst, aux); // https://repl.it/@vaniananthuni/towers-of-hanoi-recursive-javascript
-    console.log("Move disc " + n + " from " + src + " to " + dst);
-    if (q == 1) {
-      console.log("topBlock");
-      if (dst == "Dst" && src == "Start") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          if (leftBlocks == 0) {
-            topBlock.style.left = dR + "px";
-            topBlock.style.bottom = dDD + "px";
-          } else if (leftBlocks == 1) {
-            topBlock.style.left = dR + "px";
-            topBlock.style.bottom = dDD / 2 + "px";
-          } else {
-            topBlock.style.bottom = 0 + "px";
-          }
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          topBlock.style.left = dR + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          topBlock.style.left = dR + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      } else if (dst == "Dst" && src == "Middle") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          topBlock.style.left = dR / 2 + "px";
-          topBlock.style.bottom = dDD + "px";
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          topBlock.style.left = dR / 2 + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          topBlock.style.left = dR / 2 + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      } else if (dst == "Start" && src == "Middle") {
-        if (midBlocks == 0) {
-          midBlocks -= 1;
-          leftBlocks += 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = dDD + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          midBlocks -= 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          leftBlocks += 1;
-          midBlocks -= 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      } else if (dst == "Start" && src == "Dst") {
-        if (midBlocks == 0) {
-          rightBlocks -= 1;
-          leftBlocks += 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = dDD + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          rightBlocks -= 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          leftBlocks += 1;
-          rightBlocks -= 1;
-          topBlock.style.left = dL + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      } else if (dst == "Middle" && src == "Start") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = dDD + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      } else if (dst == "Middle" && src == "Dst") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = dDD + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = dDD / 2 + "px";
-        } else {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          topBlock.style.left = dM + "px";
-          topBlock.style.bottom = 0 + "px";
-        }
-      }
-    } else if (q == 2) {
-      console.log("midBlock");
-      if (dst == "Dst" && src == "Start") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          midBlock.style.left = dR + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          midBlock.style.left = dR + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      } else if (dst == "Dst" && src == "Middle") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          midBlock.style.left = dR + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          midBlock.style.left = dR + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      } else if (dst == "Start" && src == "Middle") {
-        if (midBlocks == 0) {
-          midBlocks -= 1;
-          leftBlocks += 1;
-          midBlock.style.left = dL + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          midBlocks -= 1;
-          midBlock.style.left = dL + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      } else if (dst == "Start" && src == "Dst") {
-        if (midBlocks == 0) {
-          rightBlocks -= 1;
-          leftBlocks += 1;
-          midBlock.style.left = dL + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          rightBlocks -= 1;
-          midBlock.style.left = dL + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      } else if (dst == "Middle" && src == "Start") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          midBlock.style.left = dM + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          midBlock.style.left = dM + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      } else if (dst == "Middle" && src == "Dst") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          midBlock.style.left = dM + "px";
-          midBlock.style.bottom = dDD / 2 + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          midBlock.style.left = dM + "px";
-          midBlock.style.top = 0 + "px";
-        }
-      }
-    } else if (q == 3) {
-      console.log("topBlock");
-      if (dst == "Dst" && src == "Start") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        } else {
-          rightBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        }
-      } else if (dst == "Dst" && src == "Middle") {
-        if (rightBlocks == 0) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        } else if (rightBlocks == 1) {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        } else {
-          rightBlocks += 1;
-          midBlocks -= 1;
-          bottomBlock.style.left = dR + "px";
-        }
-      } else if (dst == "Start" && src == "Middle") {
-        if (midBlocks == 0) {
-          midBlocks -= 1;
-          leftBlocks += 1;
-          bottomBlock.style.left = dL + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          midBlocks -= 1;
-          bottomBlock.style.left = dL + "px";
-        } else {
-          leftBlocks += 1;
-          midBlocks -= 1;
-          bottomBlock.style.left = dL + "px";
-        }
-      } else if (dst == "Start" && src == "Dst") {
-        if (midBlocks == 0) {
-          rightBlocks -= 1;
-          leftBlocks += 1;
-          bottomBlock.style.left = dL + "px";
-        } else if (midBlocks == 1) {
-          leftBlocks += 1;
-          rightBlocks -= 1;
-          bottomBlock.style.left = dL + "px";
-        } else {
-          leftBlocks += 1;
-          rightBlocks -= 1;
-          bottomBlock.style.left = dL + "px";
-        }
-      } else if (dst == "Middle" && src == "Start") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        } else {
-          midBlocks += 1;
-          leftBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        }
-      } else if (dst == "Middle" && src == "Dst") {
-        if (midBlocks == 0) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        } else if (midBlocks == 1) {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        } else {
-          midBlocks += 1;
-          rightBlocks -= 1;
-          bottomBlock.style.left = dM + "px";
-        }
-      }
-    }
-    setInterval(function() {
-      //tyler
-      hanoi(q - 1, aux, src, dst);
-    }, 2000);
-  }
-}
 solveForMe.addEventListener("click", function(evt) {
-  hanoi(3, "Start", "Middle", "Dst");
+  if (n == 4) {
+    setTimeout(function() {
+      topBlock.style.top = 180 + "px";
+      topBlock.style.left = dR / 2 + "px";
+      // Move disc 1 from Src to Dst
+    }, 10);
+    setTimeout(function() {
+      midBlock.style.left = dR + "px";
+      midBlock.style.top = 120 + "px";
+      // Move disc 1 from Dst to Aux
+    }, 1000);
+    setTimeout(function() {
+      topBlock.style.top = 120 + "px";
+      topBlock.style.left = dR + "px";
+      // Move disc 1 from Src to Dst
+    }, 2000);
+    setTimeout(function() {
+      bottomBlock.style.top = 50 + "px";
+      bottomBlock.style.left = dR / 2 + "px";
+    }, 3000);
+    // Move disc 1 from Dst to Src
+    // Move disc 2 from Dst to Aux
+    // Move disc 1 from Src to Aux
+    // Move disc 4 from Src to Dst
+    // Move disc 1 from Aux to Dst
+    // Move disc 2 from Aux to Src
+    // Move disc 1 from Dst to Src
+    // Move disc 3 from Aux to Dst
+    // Move disc 1 from Src to Aux
+    // Move disc 2 from Src to Dst
+    // Move disc 1 from Aux to Dst
+  }
+  if (n == 5) {
+    setTimeout(function() {
+      topBlock.style.top = 240 + "px";
+      topBlock.style.left = dR + "px";
+      // Move disc 1 from Src to Dst
+    }, 10);
+    // Move disc 2 from Src to Aux
+    setTimeout(function() {
+      midBlock.style.left = dR / 2 + "px";
+      midBlock.style.top = 185 + "px";
+      // Move disc 1 from Dst to Aux
+    }, 1000);
+    setTimeout(function() {
+      topBlock.style.top = 185 + "px";
+      topBlock.style.left = dR / 2 + "px";
+      // Move disc 3 from Src to Dst
+    }, 2000);
+    setTimeout(function() {
+      bottomBlock.style.top = 125 + "px";
+      bottomBlock.style.left = dR + "px";
+    }, 3000);
+
+    // Move disc 1 from Aux to Src
+    setTimeout(function() {
+      topBlock.style.top = 120 + "px";
+      topBlock.style.left = 0 + "px";
+      // Move disc 2 from Aux to Dst
+    }, 4300);
+    setTimeout(function() {
+      midBlock.style.top = 125 + "px";
+      midBlock.style.left = dR + "px";
+    }, 4800);
+
+    // Move disc 1 from Src to Dst
+    setTimeout(function() {
+      topBlock.style.top = 123 + "px";
+      topBlock.style.left = dR + "px";
+      // Move disc 4 from Src to Aux
+    }, 5000);
+    setTimeout(function() {
+      bigBlock.style.top = 60 + "px";
+      bigBlock.style.left = dR / 2 + "px";
+      // Move disc 1 from Dst to Aux
+    }, 6000);
+    setTimeout(function() {
+      topBlock.style.top = 180 + "px";
+      topBlock.style.left = dR / 2 + "px";
+      // Move disc 2 from Dst to Src
+    }, 7000);
+    setTimeout(function() {
+      midBlock.style.top = 120 + "px";
+      midBlock.style.left = 0 + "px";
+      // Move disc 1 from Aux to Src
+    }, 8000);
+    setTimeout(function() {
+      topBlock.style.top = 125 + "px";
+      topBlock.style.left = 0 + "px";
+      // Move disc 3 from Dst to Aux
+    }, 9000);
+    setTimeout(function() {
+      bottomBlock.style.top = 60 + "px";
+      bottomBlock.style.left = dR / 2 + "px";
+      // Move disc 1 from Src to Dst
+    }, 10000);
+    setTimeout(function() {
+      topBlock.style.top = 240 + "px";
+      topBlock.style.left = dR + "px";
+      // Move disc 2 from Src to Aux
+    }, 1100);
+    setTimeout(function() {
+      midBlock.style.top = 65 + "px";
+      midBlock.style.left = dR / 2 + "px";
+    }, 12000);
+    setTimeout(function() {
+      // Move disc 1 from Dst to Aux
+      topBlock.style.top = 80 + "px";
+      topBlock.style.left = dR / 2 + "px";
+    }, 13000);
+    setTimeout(function() {
+      // Move disc 5 from Src to Dst
+      biggerBlock.style.left = dR + "px";
+      // Move disc 1 from Aux to Src
+    }, 13000);
+    setTimeout(function() {
+      topBlock.style.top = 240 + "px";
+      topBlock.style.left = 0 + "px";
+      // Move disc 2 from Aux to Dst
+    }, 14000);
+    setTimeout(function() {
+      midBlock.style.top = 120 + "px";
+      midBlock.style.left = dR + "px";
+    }, 15000);
+    setTimeout(function() {
+      // Move disc 1 from Src to Dst
+      topBlock.style.top = 120 + "px";
+      topBlock.style.left = dR + "px";
+      // Move disc 3 from Aux to Src
+    }, 16000);
+    setTimeout(function() {
+      bottomBlock.style.left = 0 + "px";
+      bottomBlock.style.top = 120 + "px";
+    }, 17000);
+    setTimeout(function() {
+      // Move disc 1 from Dst to Aux
+      topBlock.style.top = 180 + "px";
+      topBlock.style.left = dR / 2 + "px";
+      // Move disc 2 from Dst to Src
+    }, 18000);
+    setTimeout(function() {
+      midBlock.style.top = 120 + "px";
+      midBlock.style.left = 0 + "px";
+      // Move disc 1 from Aux to Src
+    }, 19000);
+    setTimeout(function() {
+      topBlock.style.top = 120 + "px";
+      topBlock.style.left = 0 + "px";
+      // Move disc 4 from Aux to Dst
+    }, 20000);
+    setTimeout(function() {
+      bigBlock.style.left = dR + "px";
+      bigBlock.style.top = 0 + "px";
+    }, 21000);
+    setTimeout(function() {
+      // Move disc 1 from Src to Dst
+      topBlock.style.top = 120 + "px";
+      topBlock.style.left = dR + "px";
+    }, 22000);
+    setTimeout(function() {
+      // Move disc 2 from Src to Aux
+      midBlock.style.top = 180 + "px";
+      midBlock.style.left = dR / 2 + "px";
+    }, 23000);
+    setTimeout(function() {
+      // Move disc 1 from Dst to Aux
+      topBlock.style.top = 180 + "px";
+      topBlock.style.left = dR / 2 + "px";
+    }, 24000);
+    setTimeout(function() {
+      // Move disc 3 from Src to Dst
+      bottomBlock.style.left = dR + "px";
+      bottomBlock.style.top = 0 + "px";
+    }, 25000);
+    setTimeout(function() {
+      // Move disc 1 from Aux to Src
+      topBlock.style.top = 240 + "px";
+      topBlock.style.left = 0 + "px";
+    }, 26000);
+    setTimeout(function() {
+      // Move disc 2 from Aux to Dst
+      midBlock.style.top = 0 + "px";
+      midBlock.style.left = dR + "px";
+    }, 27000);
+    setTimeout(function() {
+      // Move disc 1 from Src to Dst
+      topBlock.style.top = 0 + "px";
+      topBlock.style.left = dR + "px";
+    }, 28000);
+  }
 });
