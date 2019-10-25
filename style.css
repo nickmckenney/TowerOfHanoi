@@ -15,13 +15,12 @@ h4{
 h1,h2{
   color:#8BD8BD
 }
-@keyframes textShine {/*DALLAS HELPED ME WITH THIS */
+@keyframes textShine {
  to {
    background-position: 20%;
  }
 }
 h3{
-  /* background: linear-gradient(to right, #DF678C 50%, #3D155F 90%); */
 
  background: linear-gradient(to right, #DF678C 50%, #3D155F 90%);
  -webkit-background-clip: text;
@@ -73,9 +72,7 @@ align-items: center;
   background-color:white;
 }
 .topCenterB{
-
   width:50px;
-
 }
 
 .midCenterB{
