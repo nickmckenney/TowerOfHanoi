@@ -210,18 +210,14 @@ function levelSix() {
   bigBodBlock.style.display = "block";
 }
 function levelSeven() {
-  console.log("w");
   tallBlock.style.display = "block";
-  alert("Welcome to the A team");
 }
 function levelEight() {
-  console.log("w");
   tallerBlock.style.display = "block";
-  alert("Do you have anything better to do");
 }
 
 solveForMe.addEventListener("click", function(evt) {
-  //I UNDERSTAND THESE IF ELSE STATEMENTS ARE A BAD APPORACH SINCE IT IS NOT DRY. WILL fix it in the future
+  //I UNDERSTAND THESE IF ELSE STATEMENTS ARE A BAD APPORACH SINCE IT IS NOT DRY. WILL fix it in the future!
   if (n == 4) {
     setTimeout(function() {
       topBlock.style.top = 180 + "px";
