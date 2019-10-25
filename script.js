@@ -221,6 +221,7 @@ function levelEight() {
 }
 
 solveForMe.addEventListener("click", function(evt) {
+  //I UNDERSTAND THESE IF ELSE STATEMENTS ARE A BAD APPORACH SINCE IT IS NOT DRY. WILL fix it in the future
   if (n == 4) {
     setTimeout(function() {
       topBlock.style.top = 180 + "px";
