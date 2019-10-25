@@ -3,7 +3,6 @@ let dR = 935;
 let dM = 460;
 let dL = 0;
 let dDD = -120;
-
 let topBlock = document.querySelector(".topCenterB");
 let midBlock = document.querySelector(".midCenterB");
 let bigBlock = document.querySelector(".bigBlock");
@@ -20,8 +19,6 @@ let h3 = document.querySelector("h3");
 let center = document.querySelector(".centerBlock");
 let h4 = document.querySelector("h4");
 let levelUp = document.querySelector(".levelUp");
-
-let moves = 0;
 let n = 3;
 let arr1 = [];
 let blockInPlay = [];
@@ -218,6 +215,7 @@ function levelEight() {
 
 solveForMe.addEventListener("click", function(evt) {
   //I UNDERSTAND THESE IF ELSE STATEMENTS ARE A BAD APPORACH SINCE IT IS NOT DRY. WILL fix it in the future!
+  //I will use recursion to solve this
   if (n == 4) {
     setTimeout(function() {
       topBlock.style.top = 180 + "px";
